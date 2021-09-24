@@ -1,60 +1,47 @@
-GIT Recipes
-In this page I list all kind of GIT related stuff like commands as a reference for myself.
+# GIT Recipes
 
-Navigating history
-1
-2
-3
-4
-5
-6
+Crib Notes on Git commands.
+
+## Navigating history
+
 git log ; git lg
 git checkout ca55e77e
 git checkout master
 git checkout HEAD^3
 git checkout “HEAD@{1 month ago}”
 git checkout :/Commit message
-Branching
-1
-2
-3
-4
+
+## Branching
+
 git checkout -b develop # creates new branch develop and does checkout of develop
 git merge feature/awesomeness # merges the branch "feature/awesomeness" into the current branch
-git branch -d feature/bullshit # deletes local branch "feature/bullshit"
-git push origin :feature/bullshit # deletes remote branch "feature/bullshit" from the "origin" remote
-Stash
+
+git branch -d feature/coolthing # deletes local branch "feature/coolthing"
+git push origin :feature/coolthing # deletes remote branch "feature/coolthing" from the "origin" remote
+
+## Stash
+
 Get single file from stash…
-
-1
+`
 git checkout stash@{0} -- _{{filename}}_
-Stash all files includinng untracked files
+`
+Stash all files including untracked files
 
-1
 git stash -u
-Committing
+## Committing
 Add specific lines of a file to the commit interactively
 
-1
-2
+
 git add -p --
 git add -p filename
 Commit the staged changes
 
-1
 git commit -m "your commit message"
-Bisect
+## Bisect
 Trace buggy commit with git bisect…
 
-Manual
-1
-2
-3
-4
-5
-6
-7
-8
+## Manual methods
+
 git bisect reset # only needed after a bisect
 git bisect start
 git bisect good <revision>
@@ -63,34 +50,15 @@ git bisect bad <revision>
 
 # git will checkout the next revision to check
 git bisect (good | bad)
-Automated
-1
-2
-3
-4
+## Automated methods
+
 git bisect start
 git bisect good <revision>
 git bisect bad <revision>
 git bisect run/path/to/decision/script args...
 filter-branch
 fix committer/author
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
+##
 #!/bin/sh
 
 git filter-branch -f --env-filter'
@@ -112,45 +80,6 @@ Remove filter-branch backup
 1
 git update-ref -d refs/original/refs/heads/master
 Git config
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
 [alias]
     bw = blame -w -M
     c = commit
@@ -199,28 +128,24 @@ Get all remote branches as local tracking branches except master and HEAD since 
 for branch in 'git branch -a | grep remotes/origin | grep -v HEAD | grep -v master'; do git branch --track ${branch##remotes/origin/} $branch; done
 Most probably you also want to fetch and pull the remote tracking branches
 
-1
-2
+
 git fetch --all
 git pull --all
 Recovering your local branch from a force push
 This will remove all commits previously on master and all commits done by yourself which are not yet pushed.
 
-1
-2
+
 git fetch
 git reset origin/master --hard
 To preserve your own changes and commit them again do the following.
 
-1
-2
+
 git fetch
 git reset origin/master --soft
 This will move all changes to your working directory, so you can commit them again manually.
 You can also do an interactive rebase. In this case you have to pick the commits you want to keep.
 
-1
-2
+
 git fetch
 git rebase -i origin/master
 Please note if you keep one of the commits you kept behind was one of the commits removed with the force push, that commit will again be reintroduced at the remote.
