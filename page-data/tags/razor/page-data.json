@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/razor/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/aspnetcore/"},"frontmatter":{"title":"When to use a reverse proxy with the ASP.NET Core Kestrel web server","date":"September 11, 2017"}}}]}},"pageContext":{"tag":"Razor"}},"staticQueryHashes":["2478211480"]}

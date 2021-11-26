@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/static-website/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/hugo/websitechecklist/"},"frontmatter":{"title":"Check list for Hugo website","date":"September 11, 2021"}}}]}},"pageContext":{"tag":"static website"}},"staticQueryHashes":["2478211480"]}

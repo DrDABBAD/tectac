@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/iot/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/esp32/"},"frontmatter":{"title":"Garden safari with an ESP32","date":"September 11, 2017"}}}]}},"pageContext":{"tag":"IOT"}},"staticQueryHashes":["2478211480"]}
