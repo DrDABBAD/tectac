@@ -44,6 +44,8 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
 
     Add blog posts in markdown in `content/blog`. Example blog posts have been provided.
 
+
+## Additional notes
 ## Contributors
 
 Much thanks to these contributors for making this project awesome:

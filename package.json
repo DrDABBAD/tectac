@@ -1,9 +1,9 @@
 {
   "name": "flexible-gatsby",
   "private": true,
-  "description": "A starter for a paginated blog powered by Gatsby and Markdown",
+  "description": " a paginated blog powered by Gatsby and Markdown based on ",
   "version": "1.2.0",
-  "author": "Kinyanjui Wangonya",
+  "author": "David Briggs",
   "bugs": {
     "url": "https://github.com/wangonya/flexible-gatsby/issues"
   },
@@ -40,7 +40,7 @@
     "gh-pages": "^3.1.0",
     "prettier": "^2.2.1"
   },
-  "homepage": "https://github.com/wangonya/flexible-gatsby",
+  "homepage": "https://DrDABBAD.github.iio//tectac",
   "keywords": [
     "gatsby"
   ],
