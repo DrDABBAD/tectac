@@ -72,3 +72,5 @@ yarn-error.log
 
 .idea/
 .bak
+node_modules
+.cache
